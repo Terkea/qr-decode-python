@@ -1,7 +1,7 @@
 {
   "name": "qr-decode-python",
   "version": "0.0.1",
-  "description": "Decode QR images",
+  "description": "A Node.js module to decode QR codes using Python.",
   "keywords": [
     "decode",
     "qr",
@@ -16,5 +16,9 @@
     "qr-decode": "./cli.js"
   },
   "author": "Marian Terchila",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terkea/qr-decode-python"
+  }
 }
