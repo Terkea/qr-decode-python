@@ -1,6 +1,6 @@
 {
   "name": "qr-decode-python",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A Node.js module to decode QR codes using Python.",
   "keywords": [
     "decode",
