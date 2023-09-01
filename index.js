@@ -1,13 +1,19 @@
-const { execSync } = require("child_process");
+const { exec } = require("child_process");
+const path = require("path");
+
+// This gives the absolute path to the decoder.py script within the package
+const decoderPath = path.join(__dirname, "decoder.py");
 
 function decodeQRCode(imagePath) {
-  try {
-    // Execute the Python script
-    const output = execSync(`python3 decoder.py ${imagePath}`);
-    return output.toString();
-  } catch (err) {
-    throw new Error("Failed to decode QR code:", err);
-  }
+  return new Promise((resolve, reject) => {
+    exec(`python3 ${decoderPath} ${imagePath}`, (error, stdout, stderr) => {
+      if (error) {
+        reject(new Error("Failed to decode QR code: " + stderr));
+      } else {
+        resolve(stdout.trim());
+      }
+    });
+  });
 }
 
 module.exports = decodeQRCode;
