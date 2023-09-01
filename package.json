@@ -1,0 +1,20 @@
+{
+  "name": "qr-decode-python",
+  "version": "0.0.1",
+  "description": "Decode QR images",
+  "keywords": [
+    "decode",
+    "qr",
+    "images"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "pip install -r requirements.txt"
+  },
+  "bin": {
+    "qr-decode": "./cli.js"
+  },
+  "author": "Marian Terchila",
+  "license": "ISC"
+}
